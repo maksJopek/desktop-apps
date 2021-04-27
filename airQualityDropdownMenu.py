@@ -118,7 +118,7 @@ try:
         pm25LabelValue['text'] = pm25Value
         pm25LabelValue['fg'] = color
 
-    changeCityLabel = OptionMenu(root, sensor, (*modes), command=showAll)
+    changeCityLabel = OptionMenu(root, sensor, *modes, command=showAll)
     changeCityLabel.grid(column=0, row=1, columnspan=2, sticky=EW)
     showAll()
 except Exception as apiError:
