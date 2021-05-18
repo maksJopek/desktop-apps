@@ -1,9 +1,16 @@
 from tkinter import *
 import sqlite3
+import os
 
 root = Tk()
 lst = []
 
+data_path = './databases/'
+filename = 'diary'
+os.makedirs(data_path, exist_ok=True)
+db = sqlite3.connect(data_path + filename + '.db')
+db.execute('CREATE TABLE IF NOT EXISTS diary (subject VARCHAR(200), first_grade DECIMAL(1, 0), second_grade DECIMAL(1, 0), final_grade DECIMAL(1, 0))')
+db.close()
 
 def draw_root():
     global root, lst
@@ -53,7 +60,8 @@ def draw_root():
             label.grid(row=i, column=j)
 
     for i in range(len(avg)):
-        avg[i] = round(avg[i] / (total_rows - 1), 2)
+        if total_rows - 1 != 0:
+            avg[i] = round(avg[i] / (total_rows - 1), 2)
 
     for j in range(total_columns):
         if j == 0:
