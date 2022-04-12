@@ -1,3 +1,5 @@
 desktopApps_venv/
 *.txt
 databases/
+__pycache__/
+pyrightconfig.json
