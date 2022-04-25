@@ -3,22 +3,15 @@
 ################################################################################
 ## Form generated from reading UI file 'Main.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.2.3
+## Created by: Qt User Interface Compiler version 6.1.3
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-    QMetaObject, QObject, QPoint, QRect,
-    QSize, QTime, QUrl, Qt)
-from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
-    QCursor, QFont, QFontDatabase, QGradient,
-    QIcon, QImage, QKeySequence, QLinearGradient,
-    QPainter, QPalette, QPixmap, QRadialGradient,
-    QTransform)
-from PySide6.QtWidgets import (QApplication, QMainWindow, QMenu, QMenuBar,
-    QSizePolicy, QStatusBar, QTextEdit, QVBoxLayout,
-    QWidget)
+from PySide6.QtCore import *  # type: ignore
+from PySide6.QtGui import *  # type: ignore
+from PySide6.QtWidgets import *  # type: ignore
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -54,6 +47,8 @@ class Ui_MainWindow(object):
         self.actionColor.setObjectName(u"actionColor")
         self.actionFont = QAction(MainWindow)
         self.actionFont.setObjectName(u"actionFont")
+        self.actionSave_as = QAction(MainWindow)
+        self.actionSave_as.setObjectName(u"actionSave_as")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         sizePolicy.setHeightForWidth(self.centralwidget.sizePolicy().hasHeightForWidth())
@@ -76,7 +71,7 @@ class Ui_MainWindow(object):
         self.menubar.setGeometry(QRect(0, 0, 1000, 19))
         self.menuFile = QMenu(self.menubar)
         self.menuFile.setObjectName(u"menuFile")
-        self.menuFile.setGeometry(QRect(4419, 154, 123, 110))
+        self.menuFile.setGeometry(QRect(303, 132, 123, 132))
         self.menuDecorate = QMenu(self.menubar)
         self.menuDecorate.setObjectName(u"menuDecorate")
         self.menuAlign = QMenu(self.menuDecorate)
@@ -91,6 +86,7 @@ class Ui_MainWindow(object):
         self.menuFile.addAction(self.actionNew)
         self.menuFile.addAction(self.actionOpen)
         self.menuFile.addAction(self.actionSave)
+        self.menuFile.addAction(self.actionSave_as)
         self.menuDecorate.addAction(self.menuAlign.menuAction())
         self.menuDecorate.addSeparator()
         self.menuDecorate.addAction(self.actionColor)
@@ -158,6 +154,10 @@ class Ui_MainWindow(object):
         self.actionFont.setText(QCoreApplication.translate("MainWindow", u"Font", None))
 #if QT_CONFIG(shortcut)
         self.actionFont.setShortcut(QCoreApplication.translate("MainWindow", u"Alt+F", None))
+#endif // QT_CONFIG(shortcut)
+        self.actionSave_as.setText(QCoreApplication.translate("MainWindow", u"Save as", None))
+#if QT_CONFIG(shortcut)
+        self.actionSave_as.setShortcut(QCoreApplication.translate("MainWindow", u"Alt+A", None))
 #endif // QT_CONFIG(shortcut)
         self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
         self.menuDecorate.setTitle(QCoreApplication.translate("MainWindow", u"Decorate", None))

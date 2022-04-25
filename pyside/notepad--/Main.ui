@@ -48,10 +48,10 @@
    <widget class="QMenu" name="menuFile">
     <property name="geometry">
      <rect>
-      <x>4419</x>
-      <y>154</y>
+      <x>303</x>
+      <y>132</y>
       <width>123</width>
-      <height>110</height>
+      <height>132</height>
      </rect>
     </property>
     <property name="title">
@@ -60,6 +60,7 @@
     <addaction name="actionNew"/>
     <addaction name="actionOpen"/>
     <addaction name="actionSave"/>
+    <addaction name="actionSave_as"/>
    </widget>
    <widget class="QMenu" name="menuDecorate">
     <property name="title">
@@ -181,6 +182,14 @@
    </property>
    <property name="shortcut">
     <string>Alt+F</string>
+   </property>
+  </action>
+  <action name="actionSave_as">
+   <property name="text">
+    <string>Save as</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+A</string>
    </property>
   </action>
  </widget>
